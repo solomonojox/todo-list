@@ -1,0 +1,130 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+.bg{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: black;
+}
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 700px;
+  padding: 20px;
+  height: 100%;
+}
+
+input{
+  height: 40px;
+  padding: 0 5px;
+  border: none;
+}
+.input{
+  display: grid;
+  gap: 1%;
+  grid-template-columns: 50% 20% 12% 15%;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.input-todo{
+  border-radius: 5px 0 0 5px;
+}
+.input-todo:hover{
+  background-color: #d9f0d9;
+  transition: 0.3s ease;
+}
+.input-date{
+  cursor: pointer
+}
+.input-date:hover{
+  background-color: #d9f0d9;
+  transition: 0.3s ease;
+}
+.input-time{
+  cursor: pointer;;
+}
+.input-time:hover{
+  background-color: #d9f0d9;
+  transition: 0.3s ease;
+}
+.add-todo{
+  background-color: green;
+  border: none;
+  height: 40px;
+  border-radius: 0 5px 5px 0;
+  padding: 10px 15px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;;
+}
+.add-todo:hover{
+  background-color: #1ba41b;
+  transition: 0.3s ease;
+}
+
+.display{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px;
+}
+
+.html-display{
+  font-size: 12px;
+  font-weight: 600;
+  display: grid;gap: 1%;
+  grid-template-columns: 50% 20% 12% 15%;
+}
+
+.name, .date, .time{
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.name{
+  padding: 10px;
+  background-color: #253028;
+}
+.date{
+  background-color: #5f5065;
+  padding-left: 5px;
+}
+.time{
+  background-color: #5f5065;
+  padding-left: 5px;
+}
+.delete{
+  background-color: darkred;
+  border: none; color: white;
+  font-weight: 600;
+  justify-content: center;
+}
+
+@media(max-width: 425px) {
+  .input{
+    grid-template-columns: 100%;
+  }
+  .html-display{
+    display: flex;
+    flex-direction: column;
+    /* width: 100%; */
+  }
+  .date, .time, .delete{
+    padding: 10px;
+    margin-top: 5px;
+  }
+  .delete{
+    margin-bottom: 20px;
+  }
+}
